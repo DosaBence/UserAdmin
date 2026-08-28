@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Ngkev0H9AqQ=",
+  "dgSpecHash": "Q+K8EUQ4OX0=",
   "success": true,
   "projectFilePath": "C:\\Users\\dosab\\Desktop\\SZOFTVERFEJLESZTŐ, ÉS TESZTELŐ-\\C# - WPF\\UserAdmin\\UserAdmin\\UserAdmin.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dosab\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\dosab\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\dosab\\.nuget\\packages\\mysqlconnector\\2.6.2\\mysqlconnector.2.6.2.nupkg.sha512"
+  ],
   "logs": []
 }
