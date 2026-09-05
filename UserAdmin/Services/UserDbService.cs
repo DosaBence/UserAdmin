@@ -15,7 +15,8 @@ namespace UserAdmin.Services
             var connection = new MySqlConnection(ConnectionString);
             connection.Open();
 
-            string sql = @"";
+            string sql = @"INSERT INTO `users`(`username`, `email`, `password`, `registeredAt`)
+            VALUES (@username,@Email,@Password,@RegisteredAt)";
             
             connection.Close();
         }
