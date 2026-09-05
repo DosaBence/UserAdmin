@@ -14,7 +14,9 @@ namespace UserAdmin.Services
         {
             var connection = new MySqlConnection(ConnectionString);
             connection.Open();
-            string sql = "";
+
+            string sql = @"";
+            
             connection.Close();
         }
     }
