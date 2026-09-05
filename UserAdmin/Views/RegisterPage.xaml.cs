@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UserAdmin.Models;
+using UserAdmin.Services;
 
 namespace UserAdmin.Views
 {
@@ -18,6 +20,7 @@ namespace UserAdmin.Views
     /// </summary>
     public partial class RegisterPage : Page
     {
+        private readonly UserDbService _userDbService = new UserDbService();
         public RegisterPage()
         {
             InitializeComponent();
@@ -25,8 +28,52 @@ namespace UserAdmin.Views
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
+            var username = UsernameBox.Text.Trim();
+            var email = EmailBox.Text.Trim();
+            var password = PasswordBoxInput.Text;
+            var confirmpassword = ConfirmPasswordBox.Text;
 
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirmpassword))
+            {
+                ErrorText.Text = "Minden mező kitöltése kötelező.";
+                ErrorText.Visibility = Visibility.Visible;
+                return;
+            }
+
+            if (password != confirmpassword)
+
+
+            {
+
+                ErrorText.Text = "A két jelszó nem egyezik.";
+                ErrorText.Visibility = Visibility.Visible;
+
+                return;
+
+            }
+
+            if (password.Length < 6)
+
+            {
+                ErrorText.Text = "A jelszónak legalább 6 karakterből kell hogy álljon";
+                ErrorText.Visibility = Visibility.Visible;
+
+                return;
+            }
+
+            var user = new User
+            {
+                Username = username,
+                Email = email,
+                Password = password,
+                RegisteredAt = DateTime.Now,
+            };
+            _userDbService.Add(user);
+            MessageBox.Show("Sikeres regisztráció. ");
         }
+
+
+
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
