@@ -21,10 +21,10 @@
                 <TextBox x:Name="EmailBox"/>
 
                 <TextBlock Text="Jelszó" FontSize="12" Foreground="{StaticResource MutedTextBrush}" Margin="0,0,0,4"/>
-                <TextBox x:Name="PasswordBoxInput"/>
+                <PasswordBox x:Name="PasswordBoxInput"/>
 
                 <TextBlock Text="Jelszó megerősítése" FontSize="12" Foreground="{StaticResource MutedTextBrush}" Margin="0,0,0,4"/>
-                <TextBox x:Name="ConfirmPasswordBox"/>
+                <PasswordBox x:Name="ConfirmPasswordBox"/>
                 
                 <TextBlock x:Name="ErrorText" Style="{StaticResource ErrorText}" Visibility="Collapsed" Margin="0,0,0,8"/>
 
