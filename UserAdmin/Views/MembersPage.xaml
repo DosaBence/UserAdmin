@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:UserAdmin.Views"
       mc:Ignorable="d" 
       Background="{StaticResource AccentBrush}"
+      Width="500"
       Title="Tagok listája">
 
     <Grid>
@@ -13,7 +14,47 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
-
         </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="white" CornerRadius="10" Padding="4" Margin="0,0,0,16">
+            <Grid>
+            <Menu Background="Transparent" HorizontalAlignment="Left">
+                <MenuItem x:Name="ContactMenuItem" Header="Kapcsolat" Click="ContactMenuItem_Click"/>
+                <MenuItem x:Name="HelpmenuItem" Header="Súgó" Click="HelpmenuItem_Click"/>
+            </Menu>
+
+                <Button x:Name="Logout" Content="Kijelentkezés" Style="{StaticResource LinkButton}" HorizontalAlignment="Right" Click="Logout_Click"/>
+
+            </Grid>
+     </Border>
+
+        <Grid Grid.Row="1" Margin="0,0,0,16">
+            <StackPanel>
+                <TextBlock Text="Regisztrált tagok" Style="{StaticResource TitleText}"/>
+                <TextBlock Text="Admin műveletek" Style="{StaticResource SubtitleText}"/>
+            </StackPanel>
+            <Button x:Name="AddButton" Content="+ Új tag" Style="{StaticResource PrimaryButton}" Width="120" HorizontalAlignment="Right" VerticalAlignment="Center" Height="50" Click="AddButton_Click"/>
+        </Grid>
+        
+        <!--Tagok táblázata-->
+
+        <Border Grid.Row="2" Style="{StaticResource CardBorder}" Padding="16">
+            <DataGrid x:Name="MembersGrid" IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Felhasználónév" Binding="{Binding Username}"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                    <DataGridTextColumn Header="Regisztráció ideje" Binding="{Binding RegisteredAt}"/>
+                </DataGrid.Columns>
+
+
+
+                <DataGridTemplateColumn Header="Műveletek">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid>
+        </Border>
     </Grid>
 </Page>
