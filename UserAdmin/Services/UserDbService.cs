@@ -1,6 +1,7 @@
 ﻿using MySqlConnector;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Text;
 using UserAdmin.Models;
 
@@ -53,10 +54,41 @@ namespace UserAdmin.Services
                 connection.Close();
                 return user;
             }
-         
-            connection.Close();
-            return null;
+            else
+            {
+                connection.Close();
+                return null;
+            }
+
            
+        }
+
+        public List<User> GetAll() // Ez a függvénytábla lekérdezi a users összes tartalmát.
+        {
+            var users = new List<User>();
+                 using var connection = new MySqlConnection(ConnectionString);
+            connection.Open();
+
+            string sql = @"SELECT`username`, `email`, `password`, `registeredAt` FROM `users` ORDER BY RegisteredAt";
+            var cmd = new MySqlCommand(sql, connection);
+            var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                var user = new User
+                {
+                    Username = reader.GetString(0),
+                    Email = reader.GetString(1),
+                    Password = reader.GetString(2),
+                    RegisteredAt = reader.GetDateTime(3)
+                };
+
+                users.Add(user);
+            }
+            connection.Close();
+            return users;
+
+
         }
     }
 }
