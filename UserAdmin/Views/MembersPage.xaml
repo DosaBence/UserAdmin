@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:UserAdmin.Views"
       mc:Ignorable="d" 
       Background="{StaticResource AccentBrush}"
-      Width="500"
+      Width="700"
       Title="Tagok listája">
 
     <Grid>
@@ -43,17 +43,21 @@
                     <DataGridTextColumn Header="Felhasználónév" Binding="{Binding Username}"/>
                     <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
                     <DataGridTextColumn Header="Regisztráció ideje" Binding="{Binding RegisteredAt}"/>
-                </DataGrid.Columns>
+                
 
 
 
                 <DataGridTemplateColumn Header="Műveletek">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="EditButton" Content="Szerkesztés" Style="{StaticResource LinkButton}" Tag="{Binding}" Click="EditButton_Click"/>
+                                    <Button x:Name="DeleteButton" Content="Törlés" Style="{StaticResource LinkButton}" Foreground="{StaticResource ErrorBrush}" Tag="{Binding}" Click="DeleteButton_Click"/>
+                                </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+                </DataGrid.Columns>
             </DataGrid>
         </Border>
     </Grid>

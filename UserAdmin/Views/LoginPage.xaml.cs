@@ -45,6 +45,7 @@ namespace UserAdmin.Views
             else if (user.Email == email && user.Password == password )
             {
                 MessageBox.Show("Regisztrált tag.");
+                NavigationService.Navigate(new MembersPage());
             }
             else
             {

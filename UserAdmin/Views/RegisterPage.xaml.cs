@@ -30,8 +30,8 @@ namespace UserAdmin.Views
         {
             var username = UsernameBox.Text.Trim();
             var email = EmailBox.Text.Trim();
-            var password = PasswordBoxInput.Text;
-            var confirmpassword = ConfirmPasswordBox.Text;
+            var password = PasswordBoxInput.Password;
+            var confirmpassword = ConfirmPasswordBox.Password;
 
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirmpassword))
             {
@@ -77,6 +77,7 @@ namespace UserAdmin.Views
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
+            NavigationService.Navigate(new LoginPage());
 
         }
     }

@@ -23,9 +23,9 @@
                 <TextBlock x:Name="ErrorText" Style="{StaticResource ErrorText}" Visibility="Collapsed" Margin="0,0,0,8"/>
                 <Button Content="Bejelentkezés" Style="{StaticResource PrimaryButton}" Margin="0,0,0,16" Click="LoginButton_Click" />
 
-                <StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <TextBlock Text="Nincs még fiókod?" Style="{StaticResource SubtitleText}" VerticalAlignment="Center"/>
-                    <Button Content=" Regisztrálj" Style="{StaticResource LinkButton}" Margin="6,0,0,0" x:Name="RegisterLink" Click="RegisterLink_Click"/>
+                    <Button Content=" Regisztrálj!" Style="{StaticResource LinkButton}" Margin="6,0,0,0" x:Name="RegisterLink" Click="RegisterLink_Click"/>
                 </StackPanel>
 
             </StackPanel>

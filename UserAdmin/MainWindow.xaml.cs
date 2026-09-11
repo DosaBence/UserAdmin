@@ -20,7 +20,7 @@ namespace UserAdmin
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new RegisterPage());
+            MainFrame.Navigate(new LoginPage());
         }
     }
 }

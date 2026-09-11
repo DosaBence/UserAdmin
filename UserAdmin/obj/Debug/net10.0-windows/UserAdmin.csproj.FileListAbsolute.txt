@@ -28,3 +28,7 @@ C:\Users\dosab\Desktop\SZOFTVERFEJLESZTŐ, ÉS TESZTELŐ-\C# - WPF\UserAdmin\Use
 C:\Users\dosab\Desktop\SZOFTVERFEJLESZTŐ, ÉS TESZTELŐ-\C# - WPF\UserAdmin\UserAdmin\obj\Debug\net10.0-windows\App.baml
 C:\Users\dosab\Desktop\SZOFTVERFEJLESZTŐ, ÉS TESZTELŐ-\C# - WPF\UserAdmin\UserAdmin\obj\Debug\net10.0-windows\Views\RegisterPage.g.cs
 C:\Users\dosab\Desktop\SZOFTVERFEJLESZTŐ, ÉS TESZTELŐ-\C# - WPF\UserAdmin\UserAdmin\obj\Debug\net10.0-windows\Views\RegisterPage.baml
+C:\Users\dosab\Desktop\SZOFTVERFEJLESZTŐ, ÉS TESZTELŐ-\C# - WPF\UserAdmin\UserAdmin\obj\Debug\net10.0-windows\Views\LoginPage.g.cs
+C:\Users\dosab\Desktop\SZOFTVERFEJLESZTŐ, ÉS TESZTELŐ-\C# - WPF\UserAdmin\UserAdmin\obj\Debug\net10.0-windows\Views\LoginPage.baml
+C:\Users\dosab\Desktop\SZOFTVERFEJLESZTŐ, ÉS TESZTELŐ-\C# - WPF\UserAdmin\UserAdmin\obj\Debug\net10.0-windows\Views\MembersPage.g.cs
+C:\Users\dosab\Desktop\SZOFTVERFEJLESZTŐ, ÉS TESZTELŐ-\C# - WPF\UserAdmin\UserAdmin\obj\Debug\net10.0-windows\Views\MembersPage.baml
