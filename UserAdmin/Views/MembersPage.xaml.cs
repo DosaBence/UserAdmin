@@ -29,17 +29,17 @@ namespace UserAdmin.Views
 
         private void ContactMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Kapcsolat: \nEmail: dosabence94@gmail.com\nTelefon: +36317882806","Kapcsolat", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void HelpmenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Súgó: \nAz 'Új tag' gombbal új felhasználót vehetsz fel.\nA táblázat soraiban  'Szerkesztés'-sel módosíthatod, a 'Törlés'-sel eltávolíthatod a tagot.\nA 'Kijelentkezés ' gombbal visszatérhetsz a bejelentkező oldalra. ","Súgó", MessageBoxButton.OK,MessageBoxImage.Information);
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new LoginPage());
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
