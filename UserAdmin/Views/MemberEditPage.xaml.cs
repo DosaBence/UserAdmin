@@ -33,6 +33,7 @@ namespace UserAdmin.Views
             if (existingUser is not null)
             {
                 HeaderText.Text = "Tag szerkesztése";
+                IdBox.Text = existingUser.Id.ToString();
                 UsernameBox.Text = existingUser.Username;
                 EmailBox.Text = existingUser.Email;
                 PasswordBoxInput.Password = existingUser.Password;
@@ -51,6 +52,7 @@ namespace UserAdmin.Views
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            var id = IdBox.Text;
             var username = UsernameBox.Text;
             var email = EmailBox.Text.Trim();
             var password = PasswordBoxInput.Password;
@@ -95,6 +97,7 @@ namespace UserAdmin.Views
 
             var result = new User
             {
+                Id = Convert.ToInt32(id),
                 Username = username,
                 Email = email,
                 Password = password,

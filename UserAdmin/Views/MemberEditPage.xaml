@@ -11,6 +11,12 @@
     <Grid Margin="24">
         <StackPanel VerticalAlignment="Center">
             <TextBlock x:Name="HeaderText" Text=" Új tag" Style="{StaticResource TitleText}" FontSize="20" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+
+            <TextBlock Text="Id" FontSize="12" Foreground="{StaticResource MutedTextBrush}" Margin="0,0,0,4"/>
+            <TextBox x:Name="IdBox"/>
+            
+            
             <TextBlock Text="Felhasználónév" FontSize="12" Foreground="{StaticResource MutedTextBrush}" Margin="0,0,0,4"/>
             <TextBox x:Name="UsernameBox"/>
 
