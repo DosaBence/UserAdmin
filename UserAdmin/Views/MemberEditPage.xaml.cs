@@ -35,7 +35,7 @@ namespace UserAdmin.Views
                 HeaderText.Text = "Tag szerkesztése";
                 UsernameBox.Text = existingUser.Username;
                 EmailBox.Text = existingUser.Email;
-                PasswordText.Text = existingUser.Password;
+                PasswordBoxInput.Password = existingUser.Password;
             }
             else
             {
