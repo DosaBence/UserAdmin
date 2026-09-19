@@ -57,6 +57,7 @@ namespace UserAdmin.Views
             var member = MembersGrid.SelectedItem as User;
             var User = new User
             {
+                Id = member.Id,
                 Username = member.Username,
                 Email = member.Email,
                 Password = member.Password,
@@ -68,6 +69,22 @@ namespace UserAdmin.Views
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
+            var member = MembersGrid.SelectedItem as User;
+
+            var User = new User
+            {
+                Id = member.Id,
+                Username = member.Username,
+                Email = member.Email,
+                Password = member.Password,
+            };
+
+            _userDbService.Delete(User);
+
+            MessageBox.Show("Sikeres törlés", "Törlés", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            MembersGrid.ItemsSource = _userDbService.GetAll();
+
 
         }
     }
