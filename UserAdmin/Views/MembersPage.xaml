@@ -40,6 +40,7 @@
         <Border Grid.Row="2" Style="{StaticResource CardBorder}" Padding="16">
             <DataGrid x:Name="MembersGrid" IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow">
                 <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
                     <DataGridTextColumn Header="Felhasználónév" Binding="{Binding Username}"/>
                     <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
                     <DataGridTextColumn Header="Regisztráció ideje" Binding="{Binding RegisteredAt}"/>
