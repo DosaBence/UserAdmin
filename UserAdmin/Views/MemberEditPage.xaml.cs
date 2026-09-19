@@ -101,8 +101,19 @@ namespace UserAdmin.Views
                 RegisteredAt = DateTime.Now,
             };
 
-            _userDbService.Add(result);
-            MessageBox.Show("Sikeres mentés", "Mentés", MessageBoxButton.OK, MessageBoxImage.Information);
+            if(_originalUser is null)
+            {
+                _userDbService.Add(result);
+                MessageBox.Show("Sikeres mentés", "Mentés", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+            else
+            {
+                _userDbService.Update(result);
+                MessageBox.Show("Sikeres frissítés", "Frissítés", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+          
 
         }
     }
