@@ -9,7 +9,7 @@
       Width="700"
       Title="Tagok listája">
 
-    <Grid>
+    <Grid Margin="24">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
